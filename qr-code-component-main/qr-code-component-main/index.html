@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="favicon" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      max-width: 1440px;
+      min-width: 375px;
+    }
+
+    .site-wrapper: {
+      position: relative;
+    }
+
+    .blue-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      background-color: hsl(212, 45%, 89%);
+      width: 90%;
+      height: 70%;
+      box-shadow: 10px 10px 5px hsl(220, 15%, 55%);
+    }
+
+    .white-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      border-radius: 8px;
+      width: 15%;
+      height: 70%;
+      background-color: hsl(0, 0%, 100%);
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+
+    .qr-code {
+      width: 100%;
+      height: 65%;
+      border-radius: 8px;
+    }
+
+    .title {
+      color: hsl(218, 44%, 22%);
+      text-align: center;
+      font-weight: 700;
+      margin-top: 8px;
+      font-size: 17px;
+
+    }
+
+    .text {
+      color: hsl(220, 15%, 55%);
+      text-align: center;
+      font-size: 13px;
+      font-weight: lighter;
+    }
+
+    .half-dotted-line {
+      position: absolute;
+      height: 20%;
+      z-index: 2;
+      top: 228.355px;
+      left: -5px;
+      border-left: 10px dotted #46C2CB;
+    }
+
+    .dotted-line {
+      position: absolute;
+      height: 20%;
+      top: 228.355px;
+      left: 10px;
+      border-left: 10px dotted #46C2CB;
+    }
+
+    .dot {
+      position: absolute;
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+      right: -8px;
+      bottom: -12px;
+      box-sizing: border-box;
+      border: 6px #ECF9FF solid;
+    }
+
+    .bent-line1 {
+      position: absolute;
+      height: 15%;
+      left: 300px;
+      bottom: -50px;
+      transform: rotate(30deg);
+      border-left: 8px solid #ECF9FF;
+    }
+
+    .bent-line2 {
+      position: absolute;
+      height: 15%;
+      left: 265px;
+      bottom: -50px;
+      transform: rotate(30deg);
+      border-left: 8px solid #ECF9FF;
+    }
+
+    .zigzag {
+      position: absolute;
+      height: 20px;
+      width: 30%;
+      right: -10px;
+      top: 150px;
+      --s: 20px;
+      /* control the size */
+      --_g: white
+        /* first color */
+        90deg, #0000 90.5deg;
+      background:
+        conic-gradient(from -45deg, var(--_g)),
+        conic-gradient(from 135deg, var(--_g)) calc(var(--s)/2) 0,
+        #FFD6D6;
+      /* second color */
+      background-size: var(--s) var(--s)
+    }
+
+    .line1 {
+      position: absolute;
+      height: 10%;
+      right: 38%;
+      top: -3px;
+      /* transform: rotate(30deg); */
+      border-left: 8px solid #FFD6D6;
+      border-radius: 15px;
+    }
+
+    .line2 {
+      position: absolute;
+      height: 4%;
+      right: 37.4%;
+      top: 7%;
+      transform: rotate(90deg);
+      border-left: 8px solid #FFD6D6;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Natalia Goncalves</a>.
+    </div>
+    <div class="half-dotted-line"></div>
+    <div class="dotted-line"></div>
+    <span class="dot"></span>
+    <div class="bent-line1"></div>
+    <div class="bent-line2"></div>
+    <div class="zigzag"></div>
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="blue-container">
+      <div class="white-container">
+        <img class="qr-code" src="images/image-qr-code.png" alt="">
+        <p class="title">Improve your front end skills by building projects</p>
+        <p class="text">Scan the QR code to visit Frontend Mentor and take your coding skils to next level</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
